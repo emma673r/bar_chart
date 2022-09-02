@@ -6,6 +6,19 @@
 
 .bar {
   flex-grow: 1;
-  /* background-color: greenyellow; */
+  /* animation: scroll 1s linear backwards; */
   margin-left: 1px;
 }
+
+/* @keyframes scroll {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(50px);
+  }
+} */
+
+
+/*!!!!!! scroll smoothly doesnt work  */
