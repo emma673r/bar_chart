@@ -4,6 +4,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 const model = [];
 const barArray = document.querySelectorAll(".bar");
+const peopleInQueue = document.querySelector(".people_in_queue");
 
 let timeoutSpeed = 500;
 
@@ -34,7 +35,13 @@ function arrUpdate() {
 function displayData() {
   for (let i = 0; i < 40; i++) {
     barArray.textContent = model[i];
+    peopleInQueue.textContent = "";
     barArray[i].style.height = `${model[i]}px`;
+    // add display of number of people in the queue
+    barArray[i].addEventListener("mouseover", (hoverPeopleNumber) => {
+      peopleInQueue.textContent = `There are ${model[i]} persons in the queue`;
+    });
+
     if (model[i] < 15) {
       barArray[i].style.backgroundColor = `yellowgreen`;
     } else if (model[i] < 25) {
