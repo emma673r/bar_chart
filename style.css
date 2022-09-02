@@ -1,0 +1,11 @@
+#bars {
+  display: flex;
+  height: 5rem;
+  align-items: flex-end;
+}
+
+.bar {
+  flex-grow: 1;
+  /* background-color: greenyellow; */
+  margin-left: 1px;
+}
